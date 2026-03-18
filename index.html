@@ -1,8 +1,8 @@
 <apex:page standardcontroller="Job_Application__c" recordSetVar="JobApp">
 
- <apex:pageBlock title="Job Application List"> 
+ 
 <apex:form >
-   
+   <apex:pageBlock title="Job Application List"> 
           <apex:pageBlockTable value="{!JobApp}" var="App"> 
                   
                   <apex:column headerValue="Job Application Hyperlink">
@@ -10,7 +10,10 @@
                         {!App.Name}
                         </apex:outputLink>
                   </apex:column>
-           
+                        <apex:column value="{!App.Candidate__c}"/> 
+                        <apex:column value="{!App.Position__c}"/> 
+                        <apex:column value="{!App.Work_Experience__c}"/> 
+                                 
                   
                                  
           </apex:pageBlockTable>  
