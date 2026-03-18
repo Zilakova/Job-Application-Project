@@ -1,0 +1,29 @@
+<apex:page standardcontroller="Job_Application__c" recordSetVar="JobApp">
+
+ <apex:pageBlock title="Job Application List"> 
+<apex:form >
+   
+          <apex:pageBlockTable value="{!JobApp}" var="App"> 
+                  
+                  <apex:column headerValue="Job Application Hyperlink">
+                        <apex:outputLink value="/{!App.id}" target="_blank">
+                        {!App.Name}
+                        </apex:outputLink>
+                  </apex:column>
+           
+                  
+                                 
+          </apex:pageBlockTable>  
+           
+          
+    
+      </apex:pageBlock>
+
+</apex:form>
+ 
+</apex:page>
+
+
+
+
+
